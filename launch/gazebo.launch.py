@@ -106,18 +106,16 @@ def generate_launch_description():
     # ***********************************************************************************
     
     # --- Spawner Nodes  ---
-    spawn_joint_state_broadcaster = Node( 
-        package='controller_manager',
-        executable='spawner',
-        arguments=['joint_state_broadcaster', '--controller-manager', '/controller_manager'],
-        output='screen'
+    joint_broad_spawner = Node(
+        package="controller_manager",
+        executable="spawner",
+        arguments=["joint_broad"],
     )
     
-    spawn_mecanum_controller = Node(
-        package='controller_manager',
-        executable='spawner',
-        arguments=['mecc_cont', '--controller-manager', '/controller_manager'],
-        output='screen'
+    diff_drive_spawner = Node(
+        package="controller_manager",
+        executable="spawner",
+        arguments=["diff_cont"],
     )
 
     # Event handler to spawn controllers after the robot is spawned
@@ -126,17 +124,35 @@ def generate_launch_description():
             target_action=spawn_entity_node,
             on_exit=[
                 TimerAction(
-                    period=4.0,  
-                    actions=[spawn_joint_state_broadcaster]
+                    period=4.0,
+                    actions=[joint_broad_spawner]
                 ),
                 TimerAction(
-                    period=5.0,  
-                    actions=[spawn_mecanum_controller]
+                    period=5.0,
+                    actions=[diff_drive_spawner]
                 )
             ]
         )
     )
 
+
+    # **********BRIDGIN TOPICS************************************************
+    bridge_params = os.path.join(get_package_share_directory(package_name),'config','gz_bridge.yaml')
+    ros_gz_bridge = Node(
+        package="ros_gz_bridge",
+        executable="parameter_bridge",
+        arguments=[
+            '--ros-args',
+            '-p',
+            f'config_file:={bridge_params}',
+        ]
+    )
+
+    ros_gz_image_bridge = Node(
+        package="ros_gz_image",
+        executable="image_bridge",
+        arguments=["/camera/image_raw"]
+    )
 
 
     return LaunchDescription([
@@ -154,6 +170,9 @@ def generate_launch_description():
         # # Core nodes
         rsp,
         
-        # spawn_controllers_after_robot,
+        spawn_controllers_after_robot,
+
+        ros_gz_bridge,
+        ros_gz_image_bridge
     ]
     )
