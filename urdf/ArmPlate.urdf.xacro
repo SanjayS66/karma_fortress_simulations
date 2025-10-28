@@ -184,7 +184,7 @@
             </geometry>
         </collision>
     </link>
-    <gazebo reference="Wheel1">
+    <gazebo reference="wheel1">
         <mu1>0.2</mu1>
         <mu2>0.2</mu2>
     </gazebo>
@@ -212,7 +212,7 @@
             </geometry>
         </collision>
     </link>
-    <gazebo reference="Wheel2">
+    <gazebo reference="wheel2">
         <mu1>0.2</mu1>
         <mu2>0.2</mu2>
     </gazebo>
@@ -240,7 +240,7 @@
             </geometry>
         </collision>
     </link>
-    <gazebo reference="Wheel3">
+    <gazebo reference="wheel3">
         <mu1>0.2</mu1>
         <mu2>0.2</mu2>
     </gazebo>
@@ -268,7 +268,7 @@
             </geometry>
         </collision>
     </link>
-    <gazebo reference="Wheel4">
+    <gazebo reference="wheel4">
         <mu1>0.2</mu1>
         <mu2>0.2</mu2>
     </gazebo>
@@ -1761,7 +1761,7 @@
 
                 <range>
                     <min>0.12</min>
-                    <max>8.0</max>
+                    <max>5.0</max>
                     <resolution>0.01</resolution>
                 </range>
 
