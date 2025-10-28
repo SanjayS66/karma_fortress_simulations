@@ -1832,7 +1832,7 @@
  
 <gazebo>
   <plugin name="gz_ros2_control::GazeboSimROS2ControlPlugin" filename="libgz_ros2_control-system.so">
-    <parameters>$(find rcup_garden)/config/diff_drive_controllers.yaml</parameters>
+    <parameters>$(find rcup_garden)/config/mec_drive_controllers.yaml</parameters>
   </plugin>
 </gazebo>
 
