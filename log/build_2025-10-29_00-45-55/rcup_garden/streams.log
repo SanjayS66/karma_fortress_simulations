@@ -1,0 +1,102 @@
+[0.383s] Invoking command in '/home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden': PYTHONPATH=/home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/build/rcup_garden/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/install/rcup_garden/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base build/rcup_garden build --build-base /home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/build/rcup_garden/build install --record /home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/build/rcup_garden/install.log --single-version-externally-managed install_data
+[0.522s] running egg_info
+[0.522s] creating build/rcup_garden/rcup_garden.egg-info
+[0.522s] writing build/rcup_garden/rcup_garden.egg-info/PKG-INFO
+[0.523s] writing dependency_links to build/rcup_garden/rcup_garden.egg-info/dependency_links.txt
+[0.523s] writing entry points to build/rcup_garden/rcup_garden.egg-info/entry_points.txt
+[0.523s] writing requirements to build/rcup_garden/rcup_garden.egg-info/requires.txt
+[0.523s] writing top-level names to build/rcup_garden/rcup_garden.egg-info/top_level.txt
+[0.523s] writing manifest file 'build/rcup_garden/rcup_garden.egg-info/SOURCES.txt'
+[0.524s] reading manifest file 'build/rcup_garden/rcup_garden.egg-info/SOURCES.txt'
+[0.524s] writing manifest file 'build/rcup_garden/rcup_garden.egg-info/SOURCES.txt'
+[0.524s] running build
+[0.524s] running build_py
+[0.524s] creating /home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/build/rcup_garden/build
+[0.524s] creating /home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/build/rcup_garden/build/lib
+[0.524s] creating /home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/build/rcup_garden/build/lib/rcup_garden
+[0.524s] copying rcup_garden/cmd_vel_relay.py -> /home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/build/rcup_garden/build/lib/rcup_garden
+[0.524s] copying rcup_garden/__init__.py -> /home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/build/rcup_garden/build/lib/rcup_garden
+[0.524s] running install
+[0.525s] running install_lib
+[0.525s] creating /home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/install/rcup_garden/lib/python3.10/site-packages/rcup_garden
+[0.525s] copying /home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/build/rcup_garden/build/lib/rcup_garden/cmd_vel_relay.py -> /home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/install/rcup_garden/lib/python3.10/site-packages/rcup_garden
+[0.525s] copying /home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/build/rcup_garden/build/lib/rcup_garden/__init__.py -> /home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/install/rcup_garden/lib/python3.10/site-packages/rcup_garden
+[0.525s] byte-compiling /home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/install/rcup_garden/lib/python3.10/site-packages/rcup_garden/cmd_vel_relay.py to cmd_vel_relay.cpython-310.pyc
+[0.526s] byte-compiling /home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/install/rcup_garden/lib/python3.10/site-packages/rcup_garden/__init__.py to __init__.cpython-310.pyc
+[0.526s] running install_data
+[0.526s] creating /home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/install/rcup_garden/share/ament_index
+[0.526s] creating /home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/install/rcup_garden/share/ament_index/resource_index
+[0.526s] creating /home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/install/rcup_garden/share/ament_index/resource_index/packages
+[0.526s] copying resource/rcup_garden -> /home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/install/rcup_garden/share/ament_index/resource_index/packages
+[0.526s] copying package.xml -> /home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/install/rcup_garden/share/rcup_garden
+[0.526s] creating /home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/install/rcup_garden/share/rcup_garden/launch
+[0.526s] copying launch/rsp.launch.py -> /home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/install/rcup_garden/share/rcup_garden/launch
+[0.526s] copying launch/gazebo_diff.launch.py -> /home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/install/rcup_garden/share/rcup_garden/launch
+[0.526s] copying launch/gazebo_mecanum.launch.py -> /home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/install/rcup_garden/share/rcup_garden/launch
+[0.526s] creating /home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/install/rcup_garden/share/rcup_garden/urdf
+[0.526s] copying urdf/ArmPlate.urdf.xacro -> /home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/install/rcup_garden/share/rcup_garden/urdf
+[0.526s] creating /home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/install/rcup_garden/share/rcup_garden/meshes
+[0.526s] copying meshes/LIDAR_1-v1.stl -> /home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/install/rcup_garden/share/rcup_garden/meshes
+[0.526s] copying meshes/AX_12A_03_1.stl -> /home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/install/rcup_garden/share/rcup_garden/meshes
+[0.526s] copying meshes/LIDAR_2-v1.stl -> /home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/install/rcup_garden/share/rcup_garden/meshes
+[0.527s] copying meshes/Component6.stl -> /home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/install/rcup_garden/share/rcup_garden/meshes
+[0.527s] copying meshes/ZED2i-v1.stl -> /home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/install/rcup_garden/share/rcup_garden/meshes
+[0.527s] copying meshes/AX_12A_02_4.stl -> /home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/install/rcup_garden/share/rcup_garden/meshes
+[0.527s] copying meshes/Component12.stl -> /home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/install/rcup_garden/share/rcup_garden/meshes
+[0.527s] copying meshes/link24.stl -> /home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/install/rcup_garden/share/rcup_garden/meshes
+[0.527s] copying meshes/Component1_1.stl -> /home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/install/rcup_garden/share/rcup_garden/meshes
+[0.527s] copying meshes/STEPPER_MOTOR.stl -> /home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/install/rcup_garden/share/rcup_garden/meshes
+[0.527s] copying meshes/Wheel_motor_2.stl -> /home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/install/rcup_garden/share/rcup_garden/meshes
+[0.527s] copying meshes/Nema34_bracket.stl -> /home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/install/rcup_garden/share/rcup_garden/meshes
+[0.527s] copying meshes/Wheel_motor_3.stl -> /home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/install/rcup_garden/share/rcup_garden/meshes
+[0.527s] copying meshes/AX_12A_01_4.stl -> /home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/install/rcup_garden/share/rcup_garden/meshes
+[0.527s] copying meshes/Component56.stl -> /home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/install/rcup_garden/share/rcup_garden/meshes
+[0.527s] copying meshes/lidarmount-v1.stl -> /home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/install/rcup_garden/share/rcup_garden/meshes
+[0.527s] copying meshes/AX_12A_01_1.stl -> /home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/install/rcup_garden/share/rcup_garden/meshes
+[0.528s] copying meshes/AX_12A_04_1.stl -> /home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/install/rcup_garden/share/rcup_garden/meshes
+[0.528s] copying meshes/AX_12A_02_2.stl -> /home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/install/rcup_garden/share/rcup_garden/meshes
+[0.528s] copying meshes/Wheel_motor_1.stl -> /home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/install/rcup_garden/share/rcup_garden/meshes
+[0.528s] copying meshes/Component2.stl -> /home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/install/rcup_garden/share/rcup_garden/meshes
+[0.528s] copying meshes/Component53.stl -> /home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/install/rcup_garden/share/rcup_garden/meshes
+[0.528s] copying meshes/AX_12A_01_2.stl -> /home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/install/rcup_garden/share/rcup_garden/meshes
+[0.528s] copying meshes/Component5.stl -> /home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/install/rcup_garden/share/rcup_garden/meshes
+[0.528s] copying meshes/AX_12A_04_2.stl -> /home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/install/rcup_garden/share/rcup_garden/meshes
+[0.528s] copying meshes/Component20.stl -> /home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/install/rcup_garden/share/rcup_garden/meshes
+[0.528s] copying meshes/AX_12A_01_3.stl -> /home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/install/rcup_garden/share/rcup_garden/meshes
+[0.528s] copying meshes/soft_finger_2.stl -> /home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/install/rcup_garden/share/rcup_garden/meshes
+[0.528s] copying meshes/link23.stl -> /home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/install/rcup_garden/share/rcup_garden/meshes
+[0.528s] copying meshes/AX_12A_04_4.stl -> /home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/install/rcup_garden/share/rcup_garden/meshes
+[0.528s] copying meshes/Soft_finger_1.stl -> /home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/install/rcup_garden/share/rcup_garden/meshes
+[0.528s] copying meshes/Spur_Gear_motor.stl -> /home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/install/rcup_garden/share/rcup_garden/meshes
+[0.529s] copying meshes/AX_12A_03_4.stl -> /home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/install/rcup_garden/share/rcup_garden/meshes
+[0.529s] copying meshes/Base_link.stl -> /home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/install/rcup_garden/share/rcup_garden/meshes
+[0.529s] copying meshes/AX_12A_03_2.stl -> /home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/install/rcup_garden/share/rcup_garden/meshes
+[0.529s] copying meshes/Component7.stl -> /home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/install/rcup_garden/share/rcup_garden/meshes
+[0.529s] copying meshes/AX_12A_02_3.stl -> /home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/install/rcup_garden/share/rcup_garden/meshes
+[0.529s] copying meshes/AX_12A_03_3.stl -> /home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/install/rcup_garden/share/rcup_garden/meshes
+[0.529s] copying meshes/Nema_34_v3.stl -> /home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/install/rcup_garden/share/rcup_garden/meshes
+[0.529s] copying meshes/AX_12A_02_1.stl -> /home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/install/rcup_garden/share/rcup_garden/meshes
+[0.529s] copying meshes/base_final-v3.stl -> /home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/install/rcup_garden/share/rcup_garden/meshes
+[0.530s] copying meshes/Universal_hub.stl -> /home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/install/rcup_garden/share/rcup_garden/meshes
+[0.530s] copying meshes/firstDOF_final.stl -> /home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/install/rcup_garden/share/rcup_garden/meshes
+[0.530s] copying meshes/Coupler_meccanum_V2.stl -> /home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/install/rcup_garden/share/rcup_garden/meshes
+[0.530s] copying meshes/gcomp1.stl -> /home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/install/rcup_garden/share/rcup_garden/meshes
+[0.530s] copying meshes/Wheel_motor_4.stl -> /home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/install/rcup_garden/share/rcup_garden/meshes
+[0.530s] copying meshes/Spur_Gear_driven.stl -> /home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/install/rcup_garden/share/rcup_garden/meshes
+[0.530s] copying meshes/Component55.stl -> /home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/install/rcup_garden/share/rcup_garden/meshes
+[0.531s] copying meshes/AX_12A_04_3.stl -> /home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/install/rcup_garden/share/rcup_garden/meshes
+[0.531s] copying meshes/Component54.stl -> /home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/install/rcup_garden/share/rcup_garden/meshes
+[0.531s] creating /home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/install/rcup_garden/share/rcup_garden/config
+[0.531s] copying config/mec_drive_controllers.yaml -> /home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/install/rcup_garden/share/rcup_garden/config
+[0.531s] copying config/gz_bridge.yaml -> /home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/install/rcup_garden/share/rcup_garden/config
+[0.531s] copying config/diff_drive_controllers.yaml -> /home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/install/rcup_garden/share/rcup_garden/config
+[0.531s] copying config/im_so_doneee.rviz -> /home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/install/rcup_garden/share/rcup_garden/config
+[0.531s] copying config/localisation_rviz_config.rviz -> /home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/install/rcup_garden/share/rcup_garden/config
+[0.531s] creating /home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/install/rcup_garden/share/rcup_garden/worlds
+[0.531s] copying worlds/empty_world.world -> /home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/install/rcup_garden/share/rcup_garden/worlds
+[0.531s] creating /home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/install/rcup_garden/share/rcup_garden/textures
+[0.531s] running install_egg_info
+[0.532s] Copying build/rcup_garden/rcup_garden.egg-info to /home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/install/rcup_garden/lib/python3.10/site-packages/rcup_garden-0.0.0-py3.10.egg-info
+[0.532s] running install_scripts
+[0.545s] writing list of installed files to '/home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/build/rcup_garden/install.log'
+[0.560s] Invoked command in '/home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden' returned '0': PYTHONPATH=/home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/build/rcup_garden/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/install/rcup_garden/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base build/rcup_garden build --build-base /home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/build/rcup_garden/build install --record /home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/build/rcup_garden/install.log --single-version-externally-managed install_data

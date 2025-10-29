@@ -1,0 +1,19 @@
+running egg_info
+writing build/rcup_garden/rcup_garden.egg-info/PKG-INFO
+writing dependency_links to build/rcup_garden/rcup_garden.egg-info/dependency_links.txt
+writing entry points to build/rcup_garden/rcup_garden.egg-info/entry_points.txt
+writing requirements to build/rcup_garden/rcup_garden.egg-info/requires.txt
+writing top-level names to build/rcup_garden/rcup_garden.egg-info/top_level.txt
+reading manifest file 'build/rcup_garden/rcup_garden.egg-info/SOURCES.txt'
+writing manifest file 'build/rcup_garden/rcup_garden.egg-info/SOURCES.txt'
+running build
+running build_py
+running install
+running install_lib
+running install_data
+copying urdf/ArmPlate.urdf.xacro -> /home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/install/rcup_garden/share/rcup_garden/urdf
+running install_egg_info
+removing '/home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/install/rcup_garden/lib/python3.10/site-packages/rcup_garden-0.0.0-py3.10.egg-info' (and everything under it)
+Copying build/rcup_garden/rcup_garden.egg-info to /home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/install/rcup_garden/lib/python3.10/site-packages/rcup_garden-0.0.0-py3.10.egg-info
+running install_scripts
+writing list of installed files to '/home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/build/rcup_garden/install.log'

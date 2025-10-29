@@ -1,0 +1,21 @@
+[0.393s] Invoking command in '/home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden': PYTHONPATH=/home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/build/rcup_garden/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/install/rcup_garden/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base build/rcup_garden build --build-base /home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/build/rcup_garden/build install --record /home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/build/rcup_garden/install.log --single-version-externally-managed install_data
+[0.539s] running egg_info
+[0.540s] writing build/rcup_garden/rcup_garden.egg-info/PKG-INFO
+[0.540s] writing dependency_links to build/rcup_garden/rcup_garden.egg-info/dependency_links.txt
+[0.540s] writing entry points to build/rcup_garden/rcup_garden.egg-info/entry_points.txt
+[0.540s] writing requirements to build/rcup_garden/rcup_garden.egg-info/requires.txt
+[0.540s] writing top-level names to build/rcup_garden/rcup_garden.egg-info/top_level.txt
+[0.541s] reading manifest file 'build/rcup_garden/rcup_garden.egg-info/SOURCES.txt'
+[0.542s] writing manifest file 'build/rcup_garden/rcup_garden.egg-info/SOURCES.txt'
+[0.542s] running build
+[0.542s] running build_py
+[0.542s] running install
+[0.542s] running install_lib
+[0.543s] running install_data
+[0.543s] copying urdf/ArmPlate.urdf.xacro -> /home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/install/rcup_garden/share/rcup_garden/urdf
+[0.544s] running install_egg_info
+[0.545s] removing '/home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/install/rcup_garden/lib/python3.10/site-packages/rcup_garden-0.0.0-py3.10.egg-info' (and everything under it)
+[0.545s] Copying build/rcup_garden/rcup_garden.egg-info to /home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/install/rcup_garden/lib/python3.10/site-packages/rcup_garden-0.0.0-py3.10.egg-info
+[0.545s] running install_scripts
+[0.558s] writing list of installed files to '/home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/build/rcup_garden/install.log'
+[0.572s] Invoked command in '/home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden' returned '0': PYTHONPATH=/home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/build/rcup_garden/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/install/rcup_garden/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base build/rcup_garden build --build-base /home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/build/rcup_garden/build install --record /home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/build/rcup_garden/install.log --single-version-externally-managed install_data

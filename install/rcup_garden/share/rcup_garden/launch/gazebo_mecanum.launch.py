@@ -40,7 +40,7 @@ def generate_launch_description():
     rsp = IncludeLaunchDescription(
                 PythonLaunchDescriptionSource([os.path.join(
                     get_package_share_directory(package_name),'launch','rsp.launch.py'
-                )]), launch_arguments={'use_ros2_control': 'true'}.items()
+                )]), launch_arguments={'use_sim_time': 'true', 'use_ros2_control': 'true'}.items()
     )
 
     #world launcher arguement
@@ -73,7 +73,7 @@ def generate_launch_description():
         ),
         launch_arguments={
             'gz_args': [' -r ',' -s ', ' -v4 ', world],
-
+            'use_sim_time': 'true',
             'on_exit_shutdown': on_exit_shutdown
         }.items()
     )
@@ -103,11 +103,6 @@ def generate_launch_description():
         output='screen'
     )
 
-    delayed_spawn = TimerAction(
-    period=2.0,
-    actions=[spawn_entity_node]
-    )
-
     # ***********************************************************************************
     
     # --- Spawner Nodes  ---
@@ -124,6 +119,7 @@ def generate_launch_description():
         arguments=["mec_cont",
                    "-c","controller_manager",
                    "-t","mecanum_drive_controller/MecanumDriveController"
+                   
                    ],
     )
 
@@ -142,14 +138,6 @@ def generate_launch_description():
                 )
             ]
         )
-    )
-
-    #transform to fix the lidar issue
-    static_lidar_tf = Node(
-        package='tf2_ros',
-        executable='static_transform_publisher',
-        arguments=['0','0','0','0','0','0','LIDAR_1-v1','laser_frame'],
-        output='screen'
     )
 
 
@@ -183,11 +171,10 @@ def generate_launch_description():
         gzserver_cmd,
         gzclient_cmd,
 
-        delayed_spawn,
+        spawn_entity_node,
         # # Core nodes
         rsp,
         
-        static_lidar_tf,
         spawn_controllers_after_robot,
 
         ros_gz_bridge,
