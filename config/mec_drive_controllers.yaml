@@ -25,6 +25,6 @@ mec_cont:
     base_frame_id: 'base_footprint'
     odom_frame_id: 'odom'
     enable_odom_tf: true
-    use_stamped_vel: true
+    use_stamped_vel: false
 
 

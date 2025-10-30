@@ -47,7 +47,7 @@ def generate_launch_description():
     default_world = os.path.join(
         get_package_share_directory(package_name),
         'worlds',
-        'empty_world.world'
+        'tugbot_depot.sdf'
         )    
     
     world = LaunchConfiguration('world')
@@ -124,17 +124,24 @@ def generate_launch_description():
             target_action=spawn_entity_node,
             on_exit=[
                 TimerAction(
-                    period=4.0,
+                    period=7.0,
                     actions=[joint_broad_spawner]
                 ),
                 TimerAction(
-                    period=5.0,
+                    period=8.0,
                     actions=[diff_drive_spawner]
                 )
             ]
         )
     )
 
+    #transform to fix the lidar issue
+    static_lidar_tf = Node(
+        package='tf2_ros',
+        executable='static_transform_publisher',
+        arguments=['0','0','0','0','0','0','LIDAR_1-v1','laser_frame'],
+        output='screen'
+    )
 
     # **********BRIDGIN TOPICS************************************************
     bridge_params = os.path.join(get_package_share_directory(package_name),'config','gz_bridge.yaml')
@@ -169,7 +176,8 @@ def generate_launch_description():
         spawn_entity_node,
         # # Core nodes
         rsp,
-        
+
+        static_lidar_tf,
         spawn_controllers_after_robot,
 
         ros_gz_bridge,

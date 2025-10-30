@@ -295,7 +295,7 @@
         <mu2>0.2</mu2>
     </gazebo>
 
-    <!-- updated part ends -->
+
 <!-- ************************************************************** LINKS : BASE RELEVANT ENDS ***************************************************************-->
 
 
@@ -1288,7 +1288,7 @@
         <origin xyz="-1.7763568394002505e-17 0.0 0.026999999999999993" rpy="-1.5707963267948966 1.5707963267948948 0" />
         <parent link="Wheel_motor_2" />
         <child link="wheel2" />
-        <axis xyz="1.0 2.635647389719074e-60 2.139937261679685e-14" />
+        <axis xyz="-1.0 2.635647389719074e-60 2.139937261679685e-14" />
         <limit effort="1000" velocity="1000"/>
         <dynamics damping="1.0" friction="1.0"/>
     </joint>
@@ -1318,7 +1318,7 @@
         <origin xyz="-1.7763568394002505e-17 0.005999999999999961 0.026999999999999993" rpy="-1.5707963267948966 1.5707963267948948 0" />
         <parent link="Wheel_motor_3" />
         <child link="wheel3" />
-        <axis xyz="1.0 -8.619515182870853e-61 2.139937261679685e-14" />
+        <axis xyz="-1.0 -8.619515182870853e-61 2.139937261679685e-14" />
         <limit effort="1000" velocity="1000"/>
         <dynamics damping="1.0" friction="1.0"/>
     </joint>
@@ -1893,10 +1893,10 @@
   </gazebo>
 <gazebo>
   <plugin name="gz_ros2_control::GazeboSimROS2ControlPlugin" filename="gz_ros2_control-system">
-    <parameters>$(find rcup_garden)/config/mec_drive_controllers.yaml</parameters>
+    <parameters>$(find rcup_garden)/config/diff_drive_controllers.yaml</parameters>
     <!-- <ros>
         <remapping>/mec_cont/odom:=/odom</remapping>
-      </ros> -->
+    </ros> -->
   </plugin>
 </gazebo>
 
