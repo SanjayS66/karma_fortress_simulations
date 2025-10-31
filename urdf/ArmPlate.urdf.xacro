@@ -1790,6 +1790,28 @@
 <!-- ************************************************************** LIDAR RELATED LINKS,JOINTS,PLUGINS ENDS****************************************************************-->   
 
 
+<!-- ************************************************************** IMU RELATED LINKS,JOINTS,PLUGINS ****************************************************************-->   
+
+    <link name="imu_link"/>
+    <joint name="base_final_to_imu" type="fixed">
+      <origin xyz="0 0 0.05" rpy="0 0 0"/> <!-- adjust z offset as needed -->
+      <parent link="base_final-v3"/>
+      <child  link="imu_link"/>
+    </joint>
+
+
+    <gazebo reference="imu_link">
+      <sensor name="imu_sensor" type="imu">
+        <always_on>1</always_on>
+        <update_rate>1</update_rate>
+        <visualize>true</visualize>
+        <topic>imu</topic>
+      </sensor>
+    </gazebo>
+
+<!-- ************************************************************** IMU RELATED LINKS,JOINTS,PLUGINS ENDS****************************************************************-->  
+
+
 <!-- *************************************************************ROS2 CONTROL TAG ******************************************************************************************** -->
 <!-- ROS 2 Control hardware configuration for mecanum drive -->
 <ros2_control name="GazeboSimSystem" type="system">

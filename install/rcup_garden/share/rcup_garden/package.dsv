@@ -1,6 +1,0 @@
-source;share/rcup_garden/hook/pythonpath.ps1
-source;share/rcup_garden/hook/pythonpath.dsv
-source;share/rcup_garden/hook/pythonpath.sh
-source;share/rcup_garden/hook/ament_prefix_path.ps1
-source;share/rcup_garden/hook/ament_prefix_path.dsv
-source;share/rcup_garden/hook/ament_prefix_path.sh
