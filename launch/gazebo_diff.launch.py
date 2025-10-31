@@ -103,6 +103,24 @@ def generate_launch_description():
         output='screen'
     )
 
+    ######## IMU FIX AND LOCALISATION #########################3
+    imu_repub = Node(
+        package='rcup_garden',
+        executable='republish_imu_with_cov',
+        name='imu_fixer',
+        output='screen',
+        parameters=[{'use_sim_time': True}],
+    )
+
+    ekf_node = Node(
+        package='robot_localization',
+        executable='ekf_node',
+        name='ekf_filter_node',
+        output='screen',
+        parameters=['/home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/config/ekf_params.yaml',
+                    {'use_sim_time': True}],
+    )
+
     # ***********************************************************************************
     
     # --- Spawner Nodes  ---
@@ -176,6 +194,9 @@ def generate_launch_description():
         spawn_entity_node,
         # # Core nodes
         rsp,
+
+        imu_repub,
+        ekf_node,
 
         static_lidar_tf,
         spawn_controllers_after_robot,

@@ -17,8 +17,8 @@ diff_cont:
 
     left_wheel_names: ['Wheel_motor_2_Revolute_105','Wheel_motor_3_Revolute_108']
     right_wheel_names: ['Wheel_motor_4_Revolute_106','Wheel_motor_1_Revolute_107']
-    wheel_separation: 0.49
-    wheel_radius: 0.075
+    wheel_separation: 0.49  # Distance between left and right wheels (490mm)
+    wheel_radius: 0.065     # Wheel radius (65mm)
 
     use_stamped_vel: false
 

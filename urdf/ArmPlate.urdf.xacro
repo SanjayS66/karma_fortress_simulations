@@ -1768,7 +1768,7 @@
 
                 <range>
                     <min>0.12</min>
-                    <max>5.0</max>
+                    <max>4.95</max>
                     <resolution>0.01</resolution>
                 </range>
 

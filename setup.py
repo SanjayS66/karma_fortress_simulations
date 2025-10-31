@@ -17,7 +17,8 @@ setup(
         (os.path.join('share', package_name, 'meshes'), glob('meshes/*')),
         (os.path.join('share', package_name, 'config'), glob('config/*')),
         (os.path.join('share', package_name, 'worlds'), glob('worlds/*')),
-        (os.path.join('share', package_name, 'textures'), glob('textures/*'))   
+        (os.path.join('share', package_name, 'textures'), glob('textures/*')),
+        (os.path.join('lib', package_name), glob('scripts/*.py'))
     ],
     install_requires=['setuptools'],
     zip_safe=True,
@@ -32,6 +33,8 @@ setup(
     },
     entry_points={
         'console_scripts': [
+            'republish_imu_with_cov = rcup_garden.republish_imu_with_cov:main',
+            'cmd_vel_relay = rcup_garden.cmd_vel_relay:main',
         ],
     },
 )

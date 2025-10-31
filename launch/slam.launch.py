@@ -1,21 +1,27 @@
 import os
 from ament_index_python import get_package_share_directory
 from launch.launch_description_sources import PythonLaunchDescriptionSource
-from launch.actions import IncludeLaunchDescription
+from launch.actions import IncludeLaunchDescription, TimerAction
 from launch import LaunchDescription
 from launch_ros.actions import Node
 
 def generate_launch_description():
+    
+    slam_node = Node(
+        package='slam_toolbox',
+        executable='async_slam_toolbox_node',
+        name='mapping_node',
+        output='screen',
+        parameters=['/home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/config/mapper_params_online_async.yaml',{'use_sim_time':True}]
+    )
+    
+    delayed_slam = TimerAction(
+        period=55.0,
+        actions=[slam_node]
+    )
+
     return LaunchDescription([
-
-
-        Node(
-            package='slam_toolbox',
-            executable='async_slam_toolbox_node',
-            name='mapping_node',
-            output='screen',
-            parameters=['/home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/config/mapper_params_online_async.yaml',{'use_sim_time':True}]
-        ),
+        delayed_slam,
 
 
         Node(
