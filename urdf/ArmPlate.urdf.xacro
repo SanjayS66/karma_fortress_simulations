@@ -178,15 +178,20 @@
             </material> -->
         </visual>
         <collision name="wheel1_collision">
-            <origin xyz="-0.029999999999998934 3.985414700480305e-09 -1.795055695197334e-09" rpy="1.5707963267948986 -3.7599466882338544e-14 1.5707963267949" />
+            <origin xyz="0 0 0" rpy="0 1.5708 0" />
             <geometry>
-                <mesh filename="file:///home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/meshes/Component53.stl" scale="0.001 0.001 0.001" />
+                <cylinder radius="0.075" length="0.06"/>
             </geometry>
         </collision>
     </link>
     <gazebo reference="wheel1">
-        <mu1>0.2</mu1>
+        <mu1>1.0</mu1>
         <mu2>0.2</mu2>
+        <kp>10000.0</kp>
+        <kd>1.0</kd>
+        <minDepth>0.001</minDepth>
+        <maxVel>0.1</maxVel>
+        <fdir1>1 0 0</fdir1>
     </gazebo>
 
 
@@ -206,15 +211,20 @@
             </material> -->
         </visual>
         <collision name="wheel2_collision">
-            <origin xyz="-0.1474172325407498 0.45000000398542617 0.24999999820496066" rpy="1.5707963267948948 1.5707963267948533 0" />
+            <origin xyz="0 0 0" rpy="0 1.5708 0" />
             <geometry>
-                <mesh filename="file:///home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/meshes/Component54.stl" scale="0.001 0.001 0.001" />
+                <cylinder radius="0.075" length="0.06"/>
             </geometry>
         </collision>
     </link>
     <gazebo reference="wheel2">
-        <mu1>0.2</mu1>
+        <mu1>1.0</mu1>
         <mu2>0.2</mu2>
+        <kp>10000.0</kp>
+        <kd>1.0</kd>
+        <minDepth>0.001</minDepth>
+        <maxVel>0.1</maxVel>
+        <fdir1>1 0 0</fdir1>
     </gazebo>
 
 
@@ -234,15 +244,20 @@
             </material> -->
         </visual>
         <collision name="wheel3_collision">
-            <origin xyz="-0.014999999999999538 -0.3786419912148507 3.955438074854101e-09" rpy="1.5707963267948983 -3.6508851011130416e-14 1.570796326794899" />
+            <origin xyz="0 0 0" rpy="0 1.5708 0" />
             <geometry>
-                <mesh filename="file:///home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/meshes/Component55.stl" scale="0.001 0.001 0.001" />
+                <cylinder radius="0.075" length="0.06"/>
             </geometry>
         </collision>
     </link>
     <gazebo reference="wheel3">
-        <mu1>0.2</mu1>
+        <mu1>1.0</mu1>
         <mu2>0.2</mu2>
+        <kp>10000.0</kp>
+        <kd>1.0</kd>
+        <minDepth>0.001</minDepth>
+        <maxVel>0.1</maxVel>
+        <fdir1>1 0 0</fdir1>
     </gazebo>
 
 
@@ -262,15 +277,20 @@
             </material> -->
         </visual>
         <collision name="wheel4_collision">
-            <origin xyz="-0.02999999999999993 3.985434258169108e-09 -1.79505596165086e-09" rpy="1.5707963267948946 1.5707963267948528 0" />
+            <origin xyz="0 0 0" rpy="0 1.5708 0" />
             <geometry>
-                <mesh filename="file:///home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/meshes/Component56.stl" scale="0.001 0.001 0.001" />
+                <cylinder radius="0.075" length="0.06"/>
             </geometry>
         </collision>
     </link>
     <gazebo reference="wheel4">
-        <mu1>0.2</mu1>
+        <mu1>1.0</mu1>
         <mu2>0.2</mu2>
+        <kp>10000.0</kp>
+        <kd>1.0</kd>
+        <minDepth>0.001</minDepth>
+        <maxVel>0.1</maxVel>
+        <fdir1>1 0 0</fdir1>
     </gazebo>
     <!-- WHEEL LINKS ENDS-->
 
@@ -1288,7 +1308,7 @@
         <origin xyz="-1.7763568394002505e-17 0.0 0.026999999999999993" rpy="-1.5707963267948966 1.5707963267948948 0" />
         <parent link="Wheel_motor_2" />
         <child link="wheel2" />
-        <axis xyz="-1.0 2.635647389719074e-60 2.139937261679685e-14" />
+        <axis xyz="1.0 2.635647389719074e-60 2.139937261679685e-14" />
         <limit effort="1000" velocity="1000"/>
         <dynamics damping="1.0" friction="1.0"/>
     </joint>
@@ -1298,7 +1318,7 @@
         <origin xyz="-1.7763568394002505e-17 -3.552713678800501e-17 0.026999999999999993" rpy="1.5707963267948966 -1.570796326794895 0" />
         <parent link="Wheel_motor_4" />
         <child link="wheel4" />
-        <axis xyz="-1.0 8.586479331114432e-60 -2.1399372616796854e-14" />
+        <axis xyz="1.0 8.586479331114432e-60 -2.1399372616796854e-14" />
         <limit effort="1000" velocity="1000"/>
         <dynamics damping="1.0" friction="1.0"/>
     </joint>
@@ -1308,7 +1328,7 @@
         <origin xyz="-0.0020000000000000287 0.0056568599999999945 0.026999999999999993" rpy="1.5707963267948966 -1.570796326794895 0" />
         <parent link="Wheel_motor_1" />
         <child link="wheel1" />
-        <axis xyz="-1.0 -7.16708135826507e-61 -2.139937261679685e-14" />
+        <axis xyz="1.0 -7.16708135826507e-61 -2.139937261679685e-14" />
         <limit effort="1000" velocity="1000"/>
         <dynamics damping="1.0" friction="1.0"/>
     </joint>
@@ -1318,7 +1338,7 @@
         <origin xyz="-1.7763568394002505e-17 0.005999999999999961 0.026999999999999993" rpy="-1.5707963267948966 1.5707963267948948 0" />
         <parent link="Wheel_motor_3" />
         <child link="wheel3" />
-        <axis xyz="-1.0 -8.619515182870853e-61 2.139937261679685e-14" />
+        <axis xyz="1.0 -8.619515182870853e-61 2.139937261679685e-14" />
         <limit effort="1000" velocity="1000"/>
         <dynamics damping="1.0" friction="1.0"/>
     </joint>
@@ -1860,8 +1880,9 @@
 <!-- ************************************************************** DRIVE PLUGIN ***************************************************************************************** -->
  
   <!-- To emulate Mecanum wheels in Gazebo with spherical collisions it
-  requires a custom friction model so the vehicle can strafe left to right -->
-  <gazebo reference='wheel2'>
+  requires a custom friction model so the vehicle can strafe left to right
+  ONLY FOR MECANUM WHEELS -->
+  <!-- <gazebo reference='wheel2'>
     <collision>
       <surface>
         <friction>
@@ -1912,7 +1933,7 @@
         </friction>
       </surface>
     </collision>
-  </gazebo>
+  </gazebo> -->
 <gazebo>
   <plugin name="gz_ros2_control::GazeboSimROS2ControlPlugin" filename="gz_ros2_control-system">
     <parameters>$(find rcup_garden)/config/diff_drive_controllers.yaml</parameters>

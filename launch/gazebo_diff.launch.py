@@ -47,7 +47,7 @@ def generate_launch_description():
     default_world = os.path.join(
         get_package_share_directory(package_name),
         'worlds',
-        'tugbot_depot.sdf'
+        'simple_world.sdf'
         )    
     
     world = LaunchConfiguration('world')
@@ -195,8 +195,8 @@ def generate_launch_description():
         # # Core nodes
         rsp,
 
-        imu_repub,
-        ekf_node,
+        # imu_repub,
+        # ekf_node,
 
         static_lidar_tf,
         spawn_controllers_after_robot,

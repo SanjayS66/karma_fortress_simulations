@@ -14,25 +14,29 @@ def generate_launch_description():
         output='screen',
         parameters=['/home/sanjay/ros2_workspaces/rcup_migration/src/rcup_garden/config/mapper_params_online_async.yaml',{'use_sim_time':True}]
     )
-    
-    delayed_slam = TimerAction(
-        period=55.0,
-        actions=[slam_node]
-    )
 
-    return LaunchDescription([
-        delayed_slam,
-
-
-        Node(
+    rviz2_node = Node(
             package='rviz2',
             executable='rviz2',
             name='rviz2_node',
             output='screen',
             arguments=['-d','/home/sanjay/ros2_workspaces/nav_turtlebot/src/slam_pkg/config/slam_rviz_config.rviz'],
             parameters=[{'use_sim_time': True}]
-        ),
+        )
+    
+    delayed_slam = TimerAction(
+        period=25.0,
+        actions=[slam_node]
+    )
 
-            IncludeLaunchDescription(
+    delayed_rviz = TimerAction(
+        period=25.0,
+        actions=[rviz2_node]
+    )
+
+    return LaunchDescription([
+        delayed_slam,
+        delayed_rviz,
+        IncludeLaunchDescription(
             PythonLaunchDescriptionSource([get_package_share_directory('rcup_garden'),'/launch','/gazebo_diff.launch.py']))
     ])
