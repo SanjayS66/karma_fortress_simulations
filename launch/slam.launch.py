@@ -25,12 +25,12 @@ def generate_launch_description():
         )
     
     delayed_slam = TimerAction(
-        period=25.0,
+        period=35.0,
         actions=[slam_node]
     )
 
     delayed_rviz = TimerAction(
-        period=25.0,
+        period=35.0,
         actions=[rviz2_node]
     )
 
