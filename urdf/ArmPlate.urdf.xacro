@@ -299,7 +299,7 @@
     <link name="base_footprint">
         <inertial>
             <!-- inertial origin set to zero so base_footprint frame sits at its own origin -->
-            <origin xyz="0.0 0.0 0.0" rpy="1.57 0.0 1.57" />
+            <origin xyz="0.36831 0.0 0.0" rpy="1.57 0.0 1.57" />
             <mass value="56.0" />
             <inertia ixx="2.5" iyy="2.5" izz="4.5" ixy="0.0" iyz="0.0" ixz="0.0" />
         </inertial>
@@ -307,7 +307,7 @@
 
     <joint name="base_to_robot" type="fixed">
         <!-- Place base_footprint at the geometric center of the robot (no offset) -->
-        <origin xyz="0.0 0.0 0.0" rpy="1.57 0.0 1.57" />
+        <origin xyz="-0.36 0.0 -0.15" rpy="1.57 0.0 1.57" />
         <parent link="base_footprint" />
         <child link="base_final-v3" />
     </joint>
