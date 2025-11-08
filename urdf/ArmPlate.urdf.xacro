@@ -297,12 +297,12 @@
 
     <!-- Updated part for correcting bot orientation on spawn -->
     <link name="base_footprint">
-        <inertial>
-            <!-- inertial origin set to zero so base_footprint frame sits at its own origin -->
+        <!-- <inertial>
+            
             <origin xyz="0.36831 0.0 0.0" rpy="1.57 0.0 1.57" />
             <mass value="56.0" />
             <inertia ixx="2.5" iyy="2.5" izz="4.5" ixy="0.0" iyz="0.0" ixz="0.0" />
-        </inertial>
+        </inertial> -->
     </link>
 
     <joint name="base_to_robot" type="fixed">
