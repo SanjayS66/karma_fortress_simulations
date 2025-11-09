@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-Simple relay node to forward /cmd_vel to /diff_cont/cmd_vel
-Allows teleop_twist_keyboard to work with the diff_cont controller without modification
+Simple relay node to forward /cmd_vel to /diff_cont/cmd_vel_unstamped
+Allows teleop_twist_keyboard to work with the diff_cont controller
 """
 
 import rclpy
@@ -21,7 +21,7 @@ class CmdVelRelay(Node):
             10
         )
         
-        # Publish to /diff_cont/cmd_vel (what the diff_drive_controller expects by default)
+        # Publish to /diff_cont/cmd_vel_unstamped (what the diff_drive_controller expects)
         self.publisher = self.create_publisher(
             Twist,
             '/diff_cont/cmd_vel_unstamped',

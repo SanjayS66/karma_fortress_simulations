@@ -24,7 +24,7 @@ def generate_launch_description():
 
     # --- Launch Arguments ---
     x_pose = LaunchConfiguration('x_pose', default='0.0')
-    y_pose = LaunchConfiguration('y_pose', default='0.0')
+    y_pose = LaunchConfiguration('y_pose', default='1.5')
 
 
 
@@ -33,7 +33,7 @@ def generate_launch_description():
         description='Initial X position of the robot'
     )
     declare_y_pose_arg = DeclareLaunchArgument(
-        'y_pose', default_value='0.0',
+        'y_pose', default_value='1.5',
         description='Initial Y position of the robot'
     )
 
@@ -179,6 +179,14 @@ def generate_launch_description():
         arguments=["/camera/image_raw"]
     )
 
+    # Relay node to bridge /cmd_vel (teleop) to /diff_cont/cmd_vel_unstamped
+    cmd_vel_relay = Node(
+        package='rcup_garden',
+        executable='cmd_vel_relay',
+        name='cmd_vel_relay',
+        output='screen'
+    )
+
 
     return LaunchDescription([
         # Launch arguments
@@ -202,6 +210,7 @@ def generate_launch_description():
         spawn_controllers_after_robot,
 
         ros_gz_bridge,
-        ros_gz_image_bridge
+        ros_gz_image_bridge,
+        cmd_vel_relay
     ]
     )
